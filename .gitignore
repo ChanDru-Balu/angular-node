@@ -1,0 +1,6 @@
+backend/node/micro-services/auth-services/jwt-simple-auth/node_modules/
+backend/node/micro-services/auth-services/simple-auth/node_modules/
+front-end/angular-projects/simple-todo/node_modules/
+front-end/angular-projects/simple-todo/dist/
+front-end/angular-projects/simple-todo/.angular/
+front-end/angular-projects/simple-todo/.vscode/
