@@ -37,6 +37,21 @@ describe('AuthService', () => {
     req.flush(mockResponse)
   })
 
+  it( 'should send a post request with correct data when login is called' , ()=>{
+    const mockResponse = {success: true};
+    let username = 'test user name';
+    let password = 'test password';
+
+    service.login(username,password).subscribe((response)=>{
+      expect(response).toEqual(mockResponse);
+    });
+
+    const req = httpMock.expectOne(`${service.apiUrl}/login`);
+    expect(req.request.method).toBe('POST');
+    expect(req.request.body).toEqual({username,password});
+    req.flush(mockResponse)
+  })
+
   afterEach(()=>{
     httpMock.verify();
   })
